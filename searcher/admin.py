@@ -4,6 +4,16 @@ from django.contrib import admin
 
 from .models import Fish, Insect, SeaCreature
 
-admin.site.register(Fish)
-admin.site.register(Insect)
-admin.site.register(SeaCreature)
+class FishAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'season_start', 'season_end', 'location')
+
+class InsectAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'season_start', 'season_end', 'location')
+
+class SeaCreatureAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'season_start', 'season_end')
+
+
+admin.site.register(Fish, FishAdmin)
+admin.site.register(Insect, InsectAdmin)
+admin.site.register(SeaCreature, SeaCreatureAdmin)

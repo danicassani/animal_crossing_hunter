@@ -7,7 +7,7 @@ FISH_LOCATIONS = (
     ('Pier', 'Pier'),
 )
 
-BUG_LOCATIONS = (
+INSECT_LOCATIONS = (
     ('Tree', 'Tree'),
     ('Flower', 'Flower'),
     ('Ground', 'Ground'),
