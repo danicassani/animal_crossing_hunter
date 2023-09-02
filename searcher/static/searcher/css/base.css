@@ -2,3 +2,16 @@ body{
     background-color: #000;;
     color: aliceblue;
 }
+ul {
+    list-style-type: none;
+  }
+.item-image {
+    margin-right: 2rem;
+  }
+  
+.item-image img {
+    /* width: 8rem; */
+    height: 8rem;
+    /* object-fit: cover;
+    border-radius: 50%; */
+  }

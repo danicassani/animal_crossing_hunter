@@ -1,0 +1,10 @@
+{% load static %}
+
+{% comment %} <img src="{% static 'searcher/images/fishes/Beta.png' %}" alt="hola"> {% endcomment %}
+{% for fish in fishes %}
+    {% include 'searcher/item.html' with item=fish %}
+    {% comment %} <li>{{ fish.name }}</li>
+    <img src="{% static fish.image_path %}" alt="{{ fish.name }}">
+    <p>{{ fish.price }}</p>  {% endcomment %}
+{% endfor %}
+

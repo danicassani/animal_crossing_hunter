@@ -1,0 +1,17 @@
+{% load static %}
+
+<li class="item">
+    <article>
+        <div class = "summary">
+            <h3>{{ item.name }}</h3>
+            <div class = "item-image">
+                <img src="{% static fish.image_path %}" alt="{{ item.name }}">
+            </div>
+            <div class = "details">
+                <p>{{ item.description }}</p>
+                <p>{{ item.price }}</p>
+                <date><time datetime="{{ date }}">{{ date }}</time></date>
+            </div>
+        </div>
+    </article>
+</li>

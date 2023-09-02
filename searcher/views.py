@@ -5,7 +5,15 @@ from .models import Fish, Insect, SeaCreature
 import os
 
 def index(request):
-    return HttpResponse(render(request, 'searcher/index.html'))
+    fishes = Fish.objects.all()
+    insects = Insect.objects.all()
+    sea_creatures = SeaCreature.objects.all()
+    context = {
+        'fishes': fishes,
+        'insects': insects,
+        'sea_creatures': sea_creatures
+    }
+    return HttpResponse(render(request, 'searcher/index.html', context))    
 
 # def process_images(request):
 #     for image in os.listdir('images/insects'):
