@@ -1,17 +1,21 @@
 {% load static %}
 
-<li class="item">
-    <article>
-        <div class = "summary">
-            <h3>{{ item.name }}</h3>
+<div class = "container-fluid">
+    <div class = "row inner-grid">
+        <div class = "column">
             <div class = "item-image">
-                <img src="{% static fish.image_path %}" alt="{{ item.name }}">
-            </div>
-            <div class = "details">
-                <p>{{ item.description }}</p>
-                <p>{{ item.price }}</p>
-                <date><time datetime="{{ date }}">{{ date }}</time></date>
+                <img src="{% static item.image_path %}" alt="{{ item.name }}">
             </div>
         </div>
-    </article>
-</li>
+        <h3>{{ item.name }}</h3>
+        
+        <div class = "column">
+            <p>{{ item.price }}</p>
+        </div>
+        
+    </div>
+    <div class = "row">
+        <p>{{ item.description }}</p>
+    </div>
+
+</div>

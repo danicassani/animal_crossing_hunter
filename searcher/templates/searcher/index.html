@@ -11,8 +11,10 @@
 {% block body %}
     
     <h1>Wellcome to Animal Hunter index.</h1>
-    {% comment %} add a button that calls the index2 view {% endcomment %}
-    {% comment %} <a class="btn btn-primary" href="{% url 'process_images' %}">Bring the action</a> {% endcomment %}
-    {% include "searcher/fish_catalog.html" %}
+
+    {% include "searcher/catalog.html" with title="Fishes" items=fishes %}
+    {% include "searcher/catalog.html" with title="Insects" items=insects %}
+    {% include "searcher/catalog.html" with title="Sea Creatures" items=sea_creatures %}
+
 
 {% endblock %}
